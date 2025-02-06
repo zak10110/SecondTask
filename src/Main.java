@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -5,9 +6,15 @@ public class Main {
     public static void main(String[] args) {
 
         //1)
-        for(int item: primeNumbers()){
-            System.out.print(item+" ");
-        }
+//        for(int item: primeNumbers()){
+//            System.out.print(item+" ");
+//        }
+        /*пока изучал методы для работы с массивами нашел этот метод снизу хотел спросить какая реализация лучше(эффективнее)
+         та что сверху через foreach или нижняя*/
+        System.out.println(Arrays.toString(primeNumbers()));
+
+
+
         //2)
         Scanner scanner=new Scanner(System.in);
         System.out.println("\nEnter Numb:");
@@ -15,7 +22,6 @@ public class Main {
         System.out.println(num+" is Palindrome: "+isPalindrome(num));
 
     }
-
 
     //1) С помощью циклов вывести на экран все простые числа от 1 до 100.
     public static int[] primeNumbers(){
