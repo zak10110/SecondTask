@@ -5,21 +5,29 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
+
+
         //1)
-//        for(int item: primeNumbers()){
-//            System.out.print(item+" ");
-//        }
-        /*пока изучал методы для работы с массивами нашел этот метод снизу хотел спросить какая реализация лучше(эффективнее)
+//          for(int item: primeNumbers()){
+//              System.out.print(item+" ");
+//          }
+        /*пока изучал методы для работы с массивами нашел этот метод снизу. Хотел спросить какая реализация лучше(эффективнее)
          та что сверху через foreach или нижняя*/
-        System.out.println(Arrays.toString(primeNumbers()));
+//        System.out.println(Arrays.toString(primeNumbers()));
 
 
 
         //2)
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("\nEnter Numb:");
-        int num =scanner.nextInt();
-        System.out.println(num+" is Palindrome: "+isPalindrome(num));
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("\nEnter Numb:");
+//        int num =scanner.nextInt();
+//        System.out.println(num+" is Palindrome: "+isPalindrome(num));
+
+        //3)
+        int[]arr=new int[]{7,2,9,4};
+        System.out.println(Arrays.toString(arrayReverse(arr)));
 
     }
 
@@ -57,6 +65,20 @@ public class Main {
             iterator--;
         }
         return isPalind;
+    }
+
+    //3)Написать код для зеркального переворота массива
+    public  static int[] arrayReverse(int[]arr){
+        int numOne;
+        int numTwo;
+        int iteratorFromEnd=arr.length-1;
+        for (int i=0;i<arr.length/2;i++){
+            numOne=arr[i];
+            numTwo=arr[iteratorFromEnd-i];
+            arr[i]=numTwo;
+            arr[iteratorFromEnd-i]=numOne;
+        }
+        return arr;
     }
 
 }
